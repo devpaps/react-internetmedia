@@ -1,0 +1,27 @@
+.space {
+  margin-top: 5rem;
+}
+
+.space__header {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.space__image {
+  width: 100%;
+  height: auto;
+}
+
+.space__header__sub {
+  margin: 3rem 0 2rem;
+}
+
+.space__text {
+  width: 80%;
+  margin: auto;
+}
+
+.space__image__description {
+  line-height: 1.7;
+}

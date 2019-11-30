@@ -1,0 +1,43 @@
+/* NAVBAR */
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+}
+
+.navWrapper {
+  padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.logoIkon {
+  width: 90%;
+}
+
+.hamburgerIkon {
+  width: 25px;
+  display: block;
+  margin-left: auto;
+}
+
+.hamburgerIkon:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1014px) {
+  .logoIkon {
+    width: 50%;
+  }
+}
+
+/* END NAVBAR */

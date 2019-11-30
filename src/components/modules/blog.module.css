@@ -1,0 +1,75 @@
+/* BLOG */
+
+.blog__images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+}
+
+.blog__images__barnard,
+.blog__images__starry,
+.blog__images__milkyway {
+  position: relative;
+  display: grid;
+}
+
+.blog__images__barnard,
+.blog__images__starry,
+.blog__images__milkyway:hover {
+  cursor: pointer;
+}
+
+.blog__images__text {
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blog__images__header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.blog__images__header__sub {
+  position: absolute;
+  text-align: center;
+  font-size: 1rem;
+  color: #dfc7fe;
+  top: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.blog__images__individuals {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1035px) {
+  .blog__images {
+    gap: 1rem;
+  }
+  .blog__images__milkyway {
+    grid-column: 1 / 3;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .blog__images__milkyway {
+    grid-column: unset;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .blog__images__header {
+    font-size: 1.275rem;
+  }
+}
+
+/* BLOG END */
