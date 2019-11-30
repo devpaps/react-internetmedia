@@ -1,6 +1,8 @@
 import React from "react";
 import ApplicationStyle from "../components/modules/application.module.css";
 
+import LazyLoad from "react-lazyload";
+
 import RigthArrow from "../assets/images/right-arrow.svg";
 
 const ApplicationSection = () => {
@@ -42,11 +44,13 @@ const ApplicationSection = () => {
         <div className={ApplicationStyle.button}>
           <a href="# " className={ApplicationStyle.button__link}>
             Sök tjänsten idag{" "}
-            <img
-              src={RigthArrow}
-              alt="höger pil ikon"
-              className={ApplicationStyle.button__link__arrow}
-            />
+            <LazyLoad height={200} once>
+              <img
+                src={RigthArrow}
+                alt="höger pil ikon"
+                className={ApplicationStyle.button__link__arrow}
+              />
+            </LazyLoad>
           </a>
         </div>
       </div>

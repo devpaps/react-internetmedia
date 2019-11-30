@@ -1,6 +1,8 @@
 import React from "react";
 import BlogStyle from "../components/modules/blog.module.css";
 
+import LazyLoad from "react-lazyload";
+
 import Barnard from "../assets/images/Barnard150Seahorse1024.jpg";
 import VanGogh from "../assets/images/StarryNight_VanGogh_970.jpg";
 import MilkyWay from "../assets/images/MilkyWaySaltFlat_Huerta_960_annotated.jpg";
@@ -10,11 +12,13 @@ const BlogSection = () => {
     <section className={BlogStyle.blog}>
       <div className={BlogStyle.blog__images}>
         <div className={BlogStyle.blog__images__barnard}>
-          <img
-            src={Barnard}
-            alt="Barnard Seahorse"
-            className={BlogStyle.blog__images__individuals}
-          />
+          <LazyLoad height={200} once>
+            <img
+              src={Barnard}
+              alt="Barnard Seahorse"
+              className={BlogStyle.blog__images__individuals}
+            />
+          </LazyLoad>
           <div className={BlogStyle.blog__images__text}>
             <h1 className={BlogStyle.blog__images__header}>
               Dark Seahorse in Cepheus
@@ -25,11 +29,13 @@ const BlogSection = () => {
           </h5>
         </div>
         <div className={BlogStyle.blog__images__starry}>
-          <img
-            src={VanGogh}
-            alt="Starry Night - Van Gogh"
-            className={BlogStyle.blog__images__individuals}
-          />
+          <LazyLoad height={200} once>
+            <img
+              src={VanGogh}
+              alt="Starry Night - Van Gogh"
+              className={BlogStyle.blog__images__individuals}
+            />
+          </LazyLoad>
           <div className={BlogStyle.blog__images__text}>
             <h1 className={BlogStyle.blog__images__header}>
               Starry Night by Vincent van Gogh
@@ -40,11 +46,13 @@ const BlogSection = () => {
           </h5>
         </div>
         <div className={BlogStyle.blog__images__milkyway}>
-          <img
-            src={MilkyWay}
-            alt="Vintergatan"
-            className={BlogStyle.blog__images__individuals}
-          />
+          <LazyLoad height={200} once>
+            <img
+              src={MilkyWay}
+              alt="Vintergatan"
+              className={BlogStyle.blog__images__individuals}
+            />
+          </LazyLoad>
           <div className={BlogStyle.blog__images__text}>
             <h1 className={BlogStyle.blog__images__header}>
               Night Sky Reflections from the World's Largest Mirror
