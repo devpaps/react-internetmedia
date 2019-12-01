@@ -3,20 +3,6 @@ import axios from "axios";
 import LazyLoad from "react-lazyload";
 import SpaceStyle from "../components/modules/spaceImage.module.css";
 
-// Hämta data för att visa dagens bild
-
-/* const FetchAPI = () => {
-  fetch(`${APIURL}`)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    return data;
-  })
-  .catch(err => console.log(err, "Fel!"));
-};
-
-FetchAPI(); */
-
 const SpaceSection = () => {
   const date = new Date();
   const year = date.getUTCFullYear();
@@ -25,14 +11,25 @@ const SpaceSection = () => {
 
   const APIURL = `https://apodapi.herokuapp.com/api/?date=${year}-${month}-${day}`;
 
+  // Hämta data för att visa dagens bild
   const [data, setData] = useState({ hits: [] });
   useEffect(() => {
     async function getData() {
-      const result = await axios(`${APIURL}`);
-      setData(result.data);
+      try {
+        const result = await axios(`${APIURL}`);
+        setData(result.data);
+      } catch (error) {
+        console.log(error, "Något gick fel.");
+        alert("Något gick fel, error");
+      }
     }
     getData();
   }, [APIURL]);
+
+  //Öppna större bild
+  const openPicture = hdimage => {
+    console.log(window.open(hdimage, "_self"));
+  };
 
   return (
     <section className={SpaceStyle.space}>
@@ -42,6 +39,9 @@ const SpaceSection = () => {
           className={SpaceStyle.space__image}
           src={data.url}
           alt={data.title}
+          onClick={() => {
+            openPicture(`${data.hdurl}`);
+          }}
         />
       </LazyLoad>
       <div className={SpaceStyle.space__text}>

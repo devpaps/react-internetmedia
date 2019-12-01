@@ -13,6 +13,10 @@
   height: auto;
 }
 
+.space__image:hover {
+  cursor: pointer;
+}
+
 .space__header__sub {
   margin: 3rem 0 2rem;
 }
