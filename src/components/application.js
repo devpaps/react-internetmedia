@@ -42,7 +42,12 @@ const ApplicationSection = () => {
           <li>Förstår humorn i https://userinyerface.com/</li>
         </ul>
         <div className={ApplicationStyle.button}>
-          <a href="# " className={ApplicationStyle.button__link}>
+          <a
+            href="# "
+            className={ApplicationStyle.button__link}
+            role="button"
+            tabIndex="0"
+          >
             Sök tjänsten idag{" "}
             <LazyLoad height={200} once>
               <img

@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section className={HeroStyle.hero}>
       <div className={HeroStyle.hero__text}>
-        <h1 className={HeroStyle.hero__text__lead}>FRONTEND UTVECKLARE</h1>
+        <h1 className={HeroStyle.hero__text__lead}>Frontend utvecklare</h1>
         <h2 className={HeroStyle.hero__text__sub}>
           Norrlands trevligaste byrå söker självgående kodapa till kreativ
           projektgrupp. Är det du?

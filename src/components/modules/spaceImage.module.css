@@ -8,6 +8,12 @@
   text-align: center;
 }
 
+.space__image__container {
+  width: 80vw;
+  object-fit: cover;
+  margin: auto;
+}
+
 .space__image {
   width: 100%;
   height: auto;

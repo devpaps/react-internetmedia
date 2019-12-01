@@ -6,7 +6,7 @@ import MenyIcon from "../assets/images/list-menu.svg";
 
 const NavbarSection = () => {
   return (
-    <nav>
+    <nav role="navigation" aria-label="Navigations fält">
       <div className={NavStyle.navWrapper}>
         <div>
           <a href="# ">

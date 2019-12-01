@@ -1,11 +1,14 @@
 /* APPLICATION */
 
+/* autoprefixer grid: autoplace */
+
 .application {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(4, 1fr) 30%;
   grid-template-rows: repeat(7, 1fr);
   margin-bottom: 7rem;
+  transition: all 0.5s;
 }
 
 .application__image {
